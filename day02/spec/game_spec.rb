@@ -21,7 +21,7 @@ describe Game do
   context "Given a list of moves, return the total score" do
     it "returns 15" do
       game = Game.new
-      tota_score = game.total_score("A Y\nB X\nC Z")
+      total_score = game.total_score("A Y\nB X\nC Z")
       expect(total_score).to eq 15
     end
   end

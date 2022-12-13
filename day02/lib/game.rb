@@ -18,6 +18,9 @@ class Game
     score +=6 if me=="B" && you == "C"
     score
   end
+  def total_score(move_list)
+    move_list.split("\n").collect{ |n| score(n) }.sum
+  end
 end
 
 if __FILE__ == $0

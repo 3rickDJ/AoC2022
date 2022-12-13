@@ -24,7 +24,8 @@ class Game
 end
 
 if __FILE__ == $0
+  move_list = File.read("input.txt")
   game = Game.new
-  score = game.score("A Y")
+  score = game.total_score(move_list)
   p score
 end

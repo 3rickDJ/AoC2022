@@ -21,6 +21,9 @@ class Game
   def total_score(move_list)
     move_list.split("\n").collect{ |n| score(n) }.sum
   end
+  def fix_game(moves)
+    me, you = moves.split
+  end
 end
 
 if __FILE__ == $0

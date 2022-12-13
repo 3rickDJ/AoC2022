@@ -25,4 +25,21 @@ describe Game do
       expect(total_score).to eq 15
     end
   end
+  context "Given a set of instructions, fix the game" do
+    it "Lose -> 4" do
+      game = Game.new
+      score = game.fix_game("A Y")
+      expect(score).to eq 4
+    end
+    it "Draw -> 1" do
+      game = Game.new
+      score = game.fix_game("B X")
+      expect(score).to eq 1
+    end
+    it "Win -> 7" do
+      game = Game.new
+      score = game.fix_game("C Z")
+      expect(score).to eq 7
+    end
+  end
 end

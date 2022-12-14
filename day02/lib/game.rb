@@ -60,6 +60,9 @@ class Game
     score += 3 if you == "C"
     score
   end
+  def total_score_second(move_list)
+    move_list.split("\n").collect{ |n| fix_game(n) }.sum
+  end
 end
 
 if __FILE__ == $0

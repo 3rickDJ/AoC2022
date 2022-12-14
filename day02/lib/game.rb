@@ -68,6 +68,6 @@ end
 if __FILE__ == $0
   move_list = File.read("input.txt")
   game = Game.new
-  score = game.total_score(move_list)
+  score = game.total_score_second(move_list)
   p score
 end

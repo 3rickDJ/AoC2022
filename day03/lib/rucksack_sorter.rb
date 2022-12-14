@@ -10,4 +10,7 @@ class RucksackSorter
     code = (letter.ord)-96 if letter.ord >= 97
     code
   end
+  def total_priority(rucksack_items)
+    rucksack_items.split("\n").collect{ |n| compartments(n) }.collect{ |a,b| priority( common_items(a,b) ) }.sum
+  end
 end

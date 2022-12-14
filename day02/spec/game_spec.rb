@@ -42,4 +42,11 @@ describe Game do
       expect(score).to eq 7
     end
   end
+  context "Given a second list of moves, return the total score" do
+    it "returns 12" do
+      game = Game.new
+      total_score = game.total_score_second("A Y\nB X\nC Z")
+      expect(total_score).to eq 12
+    end
+  end
 end

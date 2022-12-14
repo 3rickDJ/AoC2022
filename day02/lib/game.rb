@@ -28,7 +28,7 @@ class Game
     when "X"
       case me
       when "A"
-        you="B"
+        you="C"
       when "B"
         you="A"
       when "C"

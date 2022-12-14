@@ -26,12 +26,12 @@ describe Game do
     end
   end
   context "Given a set of instructions, fix the game" do
-    it "Lose -> 4" do
+    it "Draw -> 4" do
       game = Game.new
       score = game.fix_game("A Y")
       expect(score).to eq 4
     end
-    it "Draw -> 1" do
+    it "Lose -> 1" do
       game = Game.new
       score = game.fix_game("B X")
       expect(score).to eq 1

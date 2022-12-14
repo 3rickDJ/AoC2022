@@ -77,4 +77,36 @@ describe RucksackSorter do
       expect(common_items).to eq "s"
     end
   end
+  context "Given a letter (upper/lowerCase) return a level of priority" do
+    it "returns 16" do
+      scanner = RucksackSorter.new
+      priority = scanner.priority("p")
+      expect(priority).to eq 16
+    end
+    it "returns 16" do
+      scanner = RucksackSorter.new
+      priority = scanner.priority("L")
+      expect(priority).to eq 38
+    end
+    it "returns 16" do
+      scanner = RucksackSorter.new
+      priority = scanner.priority("P")
+      expect(priority).to eq 42
+    end
+    it "returns 16" do
+      scanner = RucksackSorter.new
+      priority = scanner.priority("v")
+      expect(priority).to eq 22
+    end
+    it "returns 16" do
+      scanner = RucksackSorter.new
+      priority = scanner.priority("t")
+      expect(priority).to eq 20
+    end
+    it "returns 16" do
+      scanner = RucksackSorter.new
+      priority = scanner.priority("s")
+      expect(priority).to eq 19
+    end
+  end
 end

@@ -14,3 +14,9 @@ class RucksackSorter
     rucksack_items.split("\n").collect{ |n| compartments(n) }.collect{ |a,b| priority( common_items(a,b) ) }.sum
   end
 end
+if __FILE__ == $0
+  rucksack_items = File.read("input.txt")
+  scanner = RucksackSorter.new
+  total_priority = scanner.total_priority(rucksack_items)
+  p total_priority
+end

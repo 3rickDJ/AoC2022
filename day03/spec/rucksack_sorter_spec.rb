@@ -109,4 +109,12 @@ describe RucksackSorter do
       expect(priority).to eq 19
     end
   end
+  context "find the sum of the priorities  of each item that appear in both compartments in a rucksack" do
+    it "returns 157" do
+      scanner = RucksackSorter.new
+      rucksack_items = "JrwpWtwJgWrhcsFMMfFFhFp\njqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\nPmmdzqPrVvPwwTWBwg\nwMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\nttgJtRGJQctTZtZT\nCrZsJsPPZsGzwwsLwLmpwMDw"
+      total_priority = scanner.total_priority(rucksack_items)
+      expect(total_priority).to eq 157
+    end
+  end
 end

@@ -39,4 +39,42 @@ describe RucksackSorter do
       expect(right).to eq "wwsLwLmpwMDw"
     end
   end
+  context "Given a pair of strings, check whether they have common elements" do
+    it "returns p" do
+      scanner = RucksackSorter.new
+      left, right = scanner.compartments("vJrwpWtwJgWrhcsFMMfFFhFp")
+      common_items = scanner.common_items(left, right)
+      expect(common_items).to eq "p"
+    end
+    it "returns L" do
+      scanner = RucksackSorter.new
+      left, right = scanner.compartments("jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL")
+      common_items = scanner.common_items(left, right)
+      expect(common_items).to eq "L"
+    end
+    it "returns P" do
+      scanner = RucksackSorter.new
+      left, right = scanner.compartments("PmmdzqPrVvPwwTWBwg")
+      common_items = scanner.common_items(left, right)
+      expect(common_items).to eq "P"
+    end
+    it "returns v" do
+      scanner = RucksackSorter.new
+      left, right = scanner.compartments("wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn")
+      common_items = scanner.common_items(left, right)
+      expect(common_items).to eq "v"
+    end
+    it "returns t" do
+      scanner = RucksackSorter.new
+      left, right = scanner.compartments("ttgJtRGJQctTZtZT")
+      common_items = scanner.common_items(left, right)
+      expect(common_items).to eq "t"
+    end
+    it "returns s" do
+      scanner = RucksackSorter.new
+      left, right = scanner.compartments("CrZsJsPPZsGzwwsLwLmpwMDw")
+      common_items = scanner.common_items(left, right)
+      expect(common_items).to eq "s"
+    end
+  end
 end

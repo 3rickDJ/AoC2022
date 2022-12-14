@@ -23,6 +23,42 @@ class Game
   end
   def fix_game(moves)
     me, you = moves.split
+    score = 0
+    case you
+    when "X"
+      case me
+      when "A"
+        you="B"
+      when "B"
+        you="A"
+      when "C"
+        you="B"
+      end
+    when "Y"
+      score+=3
+      case me
+      when "A"
+        you="A"
+      when "B"
+        you="B"
+      when "C"
+        you="C"
+      end
+    when "Z"
+      score+=6
+      case me
+      when "A"
+        you="B"
+      when "B"
+        you="C"
+      when "C"
+        you="A"
+      end
+    end
+    score += 1 if you == "A"
+    score += 2 if you == "B"
+    score += 3 if you == "C"
+    score
   end
 end
 

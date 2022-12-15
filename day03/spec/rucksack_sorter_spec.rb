@@ -122,14 +122,14 @@ describe RucksackSorter do
       it "returns r" do
         scanner = RucksackSorter.new
         list = "vJrwpWtwJgWrhcsFMMfFFhFp\njqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\nPmmdzqPrVvPwwTWBwg"
-        badge = scanner.common_items(list)
-        expect(common_item).to eq 'r'
+        badge = scanner.common_badge(list)
+        expect(badge).to eq 'r'
       end
       it "returns Z" do
         scanner = RucksackSorter.new
         list = "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\nttgJtRGJQctTZtZT\nCrZsJsPPZsGzwwsLwLmpwMDw"
-        badge = scanner.common_items(list)
-        expect(common_item).to eq 'Z'
+        badge = scanner.common_badge(list)
+        expect(badge).to eq 'Z'
       end
     end
   end

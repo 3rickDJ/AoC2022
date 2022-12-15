@@ -142,5 +142,13 @@ describe RucksackSorter do
         expect(badge).to eq 'Z'
       end
     end
+    context "Find the sum of the priorities of every badge in each group of elves" do
+      it "returns 70" do
+        list = "vJrwpWtwJgWrhcsFMMfFFhFp\njqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\nPmmdzqPrVvPwwTWBwg\nwMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\nttgJtRGJQctTZtZT\nCrZsJsPPZsGzwwsLwLmpwMDw"
+        scanner = RucksackSorter.new
+        total_priority = scanner.total_priority_badge(list)
+        expect(total_priority).to eq 70
+      end
+    end
   end
 end

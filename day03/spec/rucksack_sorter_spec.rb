@@ -118,7 +118,17 @@ describe RucksackSorter do
     end
   end
   describe "Part II" do
-    context "Each 3 lines, represent a group of 3 elves. Every group has a common item" do
+    context "Each 3 lines, represent a group of 3 elves" do
+      it "returns an array of groups of 3 elves" do
+        elves = [["vJrwpWtwJgWrhcsFMMfFFhFp","jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg"],
+                 ["wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn","ttgJtRGJQctTZtZT","CrZsJsPPZsGzwwsLwLmpwMDw"]]
+        list = "vJrwpWtwJgWrhcsFMMfFFhFp\njqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\nPmmdzqPrVvPwwTWBwg\nwMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\nttgJtRGJQctTZtZT\nCrZsJsPPZsGzwwsLwLmpwMDw"
+        scanner = RucksackSorter.new
+        groups = scanner.group_elves(list)
+        expect(groups).to eq(elves)
+      end
+    end
+    context "Every group has a common item" do
       it "returns r" do
         scanner = RucksackSorter.new
         list = ["vJrwpWtwJgWrhcsFMMfFFhFp","jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg"]

@@ -5,6 +5,11 @@ class RucksackSorter
   def common_items(first, second)
     first.split("").intersection(second.split("")).pop
   end
+  def group_elves(list)
+    groups = []
+    list.split("\n").each_slice(3){ |n| groups << n}
+    groups
+  end
   def common_badge(lists)
     lists.collect{ |n| n.chars }.inject{ |a, b| a.intersection(b)}.pop
   end

@@ -21,6 +21,10 @@ class RucksackSorter
   def total_priority(rucksack_items)
     rucksack_items.split("\n").collect{ |n| compartments(n) }.collect{ |a,b| priority( common_items(a,b) ) }.sum
   end
+  def total_priority_badge(list)
+    groups = group_elves(list)
+    groups.collect{ |n| priority(common_badge(n)) }.sum
+  end
 end
 if __FILE__ == $0
   rucksack_items = File.read("input.txt")

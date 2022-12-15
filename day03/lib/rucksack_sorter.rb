@@ -29,6 +29,6 @@ end
 if __FILE__ == $0
   rucksack_items = File.read("input.txt")
   scanner = RucksackSorter.new
-  total_priority = scanner.total_priority(rucksack_items)
+  total_priority = scanner.total_priority_badge(rucksack_items)
   p total_priority
 end

@@ -5,6 +5,9 @@ class RucksackSorter
   def common_items(first, second)
     first.split("").intersection(second.split("")).pop
   end
+  def common_badge(lists)
+    lists.split("\n").collect{ |n| n.chars }.inject{ |a, b| a.intersection(b)}.pop
+  end
   def priority(letter)
     code = (letter.ord)-38 if letter.ord <= 90
     code = (letter.ord)-96 if letter.ord >= 97

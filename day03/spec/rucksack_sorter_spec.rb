@@ -120,15 +120,15 @@ describe RucksackSorter do
   describe "Part II" do
     context "Each 3 lines, represent a group of 3 elves. Every group has a common item" do
       it "returns r" do
-        scanner = Rucksack.new
+        scanner = RucksackSorter.new
         list = "vJrwpWtwJgWrhcsFMMfFFhFp\njqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\nPmmdzqPrVvPwwTWBwg"
-        badge = scanner.common_item(list)
+        badge = scanner.common_items(list)
         expect(common_item).to eq 'r'
       end
       it "returns Z" do
-        scanner = Rucksack.new
+        scanner = RucksackSorter.new
         list = "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\nttgJtRGJQctTZtZT\nCrZsJsPPZsGzwwsLwLmpwMDw"
-        badge = scanner.common_item(list)
+        badge = scanner.common_items(list)
         expect(common_item).to eq 'Z'
       end
     end

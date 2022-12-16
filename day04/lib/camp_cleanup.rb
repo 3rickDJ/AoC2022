@@ -13,6 +13,13 @@ class CampCleanup
         b = ranges[1].to_set
         a.subset?(b) || b.subset?(a)
     end
+
+    def overlap?(ranges)
+      ranges = sections(ranges)
+      a = ranges[0].to_set
+      b = ranges[1].to_set
+      ! a.disjoint? b
+    end
 end
 
 if __FILE__ == $0

@@ -26,7 +26,7 @@ class CampCleanup
 end
 
 if __FILE__ == $0
-    assignments = File.read("input.txt").split("\n")
+    assignments = File.read("input.txt")
     scanner = CampCleanup.new
-    p assignments.select{|n| scanner.contain?(n) }.size
+    p scanner.overlapping_assigns(assignments)
 end

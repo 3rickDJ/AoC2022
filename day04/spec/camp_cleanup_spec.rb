@@ -34,5 +34,38 @@ describe CampCleanup do
                 expect(sections).to eq [2..6,4..8]
             end
         end
+
+        context "Given a pair of ranges, say whether one contains the other" do
+            it "Return false" do
+                scanner = CampCleanup.new
+                sections = scanner.contain?("2-6,4-8")
+                expect(sections).to be false
+            end
+            it "Return false" do
+                scanner = CampCleanup.new
+                sections = scanner.contain?("2-3,4-5")
+                expect(sections).to be false
+            end
+            it "Return false" do
+                scanner = CampCleanup.new
+                sections = scanner.contain?("5-7,7-9")
+                expect(sections).to be false
+            end
+            it "Return true" do
+                scanner = CampCleanup.new
+                sections = scanner.contain?("2-8,3-7")
+                expect(sections).to be true
+            end
+            it "Return true" do
+                scanner = CampCleanup.new
+                sections = scanner.contain?("6-6,4-6")
+                expect(sections).to be true
+            end
+            it "Return false" do
+                scanner = CampCleanup.new
+                sections = scanner.contain?("2-6,4-8")
+                expect(sections).to be false
+            end
+        end
     end
 end

@@ -68,4 +68,38 @@ describe CampCleanup do
             end
         end
     end
+    describe "Part II" do
+      context "If two ranges overlap return true" do
+        it "return false" do
+          scanner = CampCleanup.new
+          ranges = "2-4,6-8"
+          expect(scanner.overlap?(ranges)).to be false
+        end
+        it "return false" do
+          scanner = CampCleanup.new
+          ranges = "2-3,4-5"
+          expect(scanner.overlap?(ranges)).to be false
+        end
+        it "return false" do
+          scanner = CampCleanup.new
+          ranges = "5-7,7-9"
+          expect(scanner.overlap?(ranges)).to be true
+        end
+        it "return false" do
+          scanner = CampCleanup.new
+          ranges = "2-8,3-7"
+          expect(scanner.overlap?(ranges)).to be true
+        end
+        it "return false" do
+          scanner = CampCleanup.new
+          ranges = "6-6,4-6"
+          expect(scanner.overlap?(ranges)).to be true
+        end
+        it "return false" do
+          scanner = CampCleanup.new
+          ranges = "2-6,4-8"
+          expect(scanner.overlap?(ranges)).to be true
+        end
+      end
+   end
 end

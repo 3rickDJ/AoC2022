@@ -20,6 +20,9 @@ class CampCleanup
       b = ranges[1].to_set
       ! a.disjoint? b
     end
+    def overlapping_assigns(assignments)
+      assignments.split("\n").select{ |n| overlap? n }.size
+    end
 end
 
 if __FILE__ == $0

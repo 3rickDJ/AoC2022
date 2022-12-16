@@ -16,7 +16,7 @@ class CampCleanup
 end
 
 if __FILE__ == $0
-    assignments = File.readlines("input.txt")
-    campCleanup = CampCleanup.new
-    assignments.select{|n| campCleanup.contain?(n) }.size
+    assignments = File.read("input.txt").split("\n")
+    scanner = CampCleanup.new
+    p assignments.select{|n| scanner.contain?(n) }.size
 end

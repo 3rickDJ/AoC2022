@@ -1,3 +1,4 @@
+require 'set'
 class CampCleanup
     def sections(secs)
         secs.split(',').collect do |n|

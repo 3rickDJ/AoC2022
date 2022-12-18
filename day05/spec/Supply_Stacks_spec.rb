@@ -15,8 +15,8 @@ describe SupplyStacks do
         move 2 from 2 to 1
         move 1 from 1 to 2
         EOT
-        stack = SupplyStacks.new
-        expect(stack.stacks(input)).to eq [["Z","N"],["M","C","D"],["P"]]
+        stack = SupplyStacks.new(input)
+        expect(stack.stacks).to eq [["Z","N"],["M","C","D"],["P"]]
       end
     end
   end

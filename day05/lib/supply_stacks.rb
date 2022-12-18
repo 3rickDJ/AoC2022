@@ -1,0 +1,2 @@
+class SupplyStacks
+end
